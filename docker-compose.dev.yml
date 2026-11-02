@@ -1,0 +1,22 @@
+# Laptop development database only. Never used for the measured environments.
+#   docker compose -f docker-compose.dev.yml up -d
+# Creates fiveg (app) and fiveg_test (pytest), both with PostGIS, on localhost:5432.
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: fiveg
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/dev-init.sql:/docker-entrypoint-initdb.d/20-test-db.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      retries: 10
+
+volumes:
+  pgdata:

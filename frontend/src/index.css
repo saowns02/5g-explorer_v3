@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { @apply bg-ground text-ink font-sans antialiased; font-stretch: 100%; }
+
+@layer utilities {
+  /* Archivo width axis: wide for the title and readouts, narrow for labels. */
+  .wide { font-stretch: 125%; }
+  .semi { font-stretch: 87.5%; }
+  .narrow { font-stretch: 75%; }
+  .tabular { font-variant-numeric: tabular-nums; }
+}
+
+@layer components {
+  /* Section label: small, sentence case, narrow. */
+  .label { @apply text-[13px] font-semibold text-ink semi; }
+  .hint { @apply text-xs text-muted leading-relaxed; }
+  /* Large numeric readout. */
+  .readout { @apply wide font-bold tabular text-ink leading-none; }
+  .overlay { @apply bg-panel border border-rule rounded-md shadow-[0_1px_2px_rgba(15,27,38,0.08),0_6px_20px_rgba(15,27,38,0.18)]; }
+  /* Segmented control. */
+  .seg { @apply flex border border-ink rounded overflow-hidden; }
+  .seg > button { @apply flex-1 px-3 py-1.5 text-[13px] font-medium semi text-ink bg-panel transition-colors; }
+  .seg > button + button { @apply border-l border-ink; }
+  .seg > button[aria-pressed='true'] { @apply bg-ink text-panel; }
+  .seg > button:not([aria-pressed='true']):hover { @apply bg-ground; }
+}
+
+:focus-visible { outline: 2px solid #d9622b; outline-offset: 2px; }
+.scroll-thin { scrollbar-width: thin; scrollbar-color: #c3cbc9 transparent; }
+
+/* Map table behind the globe: faint survey grid. */
+.map-table {
+  background-color: #0f1b26;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center;
+}
+
+.scene-tooltip { font-family: "Archivo Variable", Archivo, "Helvetica Neue", Arial, sans-serif !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

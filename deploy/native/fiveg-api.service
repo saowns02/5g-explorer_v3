@@ -1,0 +1,16 @@
+[Unit]
+Description=5G Globe Explorer API (FastAPI)
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+User=@APP_USER@
+Group=@APP_USER@
+WorkingDirectory=@APP_DIR@/api
+EnvironmentFile=@ENV_DIR@/api.env
+ExecStart=@APP_DIR@/venv/bin/uvicorn app.main:app --host 127.0.0.1 --port @API_PORT@ --workers @API_WORKERS@
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

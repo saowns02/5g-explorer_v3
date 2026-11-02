@@ -1,0 +1,227 @@
+2degrees
+3
+4ka
+A1
+A1 Hrvatska
+A1 Hrvatski
+A1 Macedonia
+Advanced Info Service
+Airtel
+Algar Telecom
+Altice
+Antel
+Asia Pacific Telecom (APT)
+AT&T Mexico
+AT&T Mobility
+Azercell
+Bakcell
+Batelco
+Beeline
+Bell
+Beltelecom
+BH Telecom
+BITE
+Bite
+Bmobile
+Bouygues Telecom
+C Spire
+Cable & Wireless
+Celcom
+Cellcom
+China Mobile
+China Mobile Hong Kong
+China Telecom
+China Unicom
+Chunghwa Telecom
+Claro
+CNT
+Cosmote
+Crnogorski Telekom
+CTM
+Cyta
+Dhiraagu
+Dialog Axiata
+Digi
+Digicel
+Directv
+Dish Wireless
+DITO
+Djezzy
+DNA
+DNB
+Docomo Pacific
+Dtac
+DU
+Eastlink
+Econet Wireless
+EE
+Eir
+Elisa
+Emtel
+Entel
+Epic
+Ethio Telecom
+Etisalat
+Far Eastone
+Free
+Free Mobile
+Freedom Mobile
+Føroya Tele
+Gabon Telecom
+GCI
+Gibtelecom
+Globe Telecom
+Grameenphone
+GTA
+Hong Kong Telecom (CSL Mobile)
+HOT Mobile
+Hrvatski Telekom
+HT Eronet
+ICE
+Iliad
+Jazz
+JT
+KaRtel (Beeline)
+Kazakhtelecom
+Kcell
+KDDI (Au)
+KPN
+KT
+Lao Telecom
+Lao Telecommunications Company (LTC)
+LG U+
+Liberty Mobile
+Lifecell
+LMT
+M1
+Mafab Communications
+Magenta Telekom
+Magyar Telekom
+Makedonski Telekom
+Mascom
+Mascom Wireless
+Maxis
+MegaCom
+MegaFon
+Melita
+MobiFone
+Mobily
+Mobitel
+Mobiuz
+Monaco Telecom
+Motiv
+Movistar
+MTN
+MTN Irancell
+MTN Nigeria
+MTS
+MyT Mobile
+Mytel
+Nar
+Nepal Telecom
+Nex-Tech Wireless
+Nos
+Nova
+NTT Docomo
+O!
+O2
+Oi
+Omantel
+One
+Ooredoo
+Optus
+Orange
+Pelephone
+Personal
+Play
+Plus
+POST
+Proximus
+PTCL
+Qcell
+Rain
+Rakuten Mobile
+Reliance Jio
+Robi
+Rogers Wireless
+Safaricom
+Salt
+SaskTel
+SFR
+Siminn
+Singtel
+SK Telecom
+Slovak Telekom
+Smart Axiata
+Smart Communications
+SmarTone
+Softbank
+Spark
+StarHub
+STC
+Sunrise
+Sure
+Swisscom
+T-2
+T-Mobile
+Taiwan Mobile
+Tango
+Tattelecom
+Tcell
+TDC
+Telcel
+Tele2
+Telecom Romania
+Telekom Deutschland
+Telekom Malaysia
+Telekom Slovenije
+Telemach
+Telenor
+Telesur
+Teletalk
+Telia
+Telkom
+Telkomsel
+Telma Mobile SA
+Telstra
+Telus
+Three
+Tigo
+TIM
+Tim
+Tmcel
+TNM
+Togocom
+Touch
+True Move H
+Turkcell
+Tusass
+Türk Telekom
+U Mobile
+U.S. Cellular
+Ucell
+Umniah
+Unitel
+UZ Telekom
+Verizon Wireless
+Videotron
+Viettel
+Vinaphone
+VIVA
+Viva
+Viva-MTS
+Vivacom
+Vivo
+Vodacom
+Vodafone
+Vodafone Idea
+VodafoneZiggo
+Wind Tre
+WOM
+XL Axiata
+YES
+Yes
+Yoigo
+Zain
+ZET-Mobile
+Zong

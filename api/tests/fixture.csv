@@ -1,0 +1,10 @@
+operator,city_name,deployment_type,status,latitude,longitude,zero_coord_flag
+EE,London,5G NR,Commercial,51.5072,-0.1276,False
+O2,London,5G NR,Commercial,51.5072,-0.1276,False
+Three,Croydon,5G NR,Pre-release,51.3762,-0.0982,False
+Orange,Paris,5G NR,Commercial,48.8566,2.3522,False
+Free Mobile,Paris,5G NR,Limited,48.8606,2.3376,False
+Verizon Wireless,"New York, NY",5G NR,Commercial,40.7128,-74.006,False
+Swisscom,Zürich,5G NR,Commercial,47.3769,8.5417,False
+Salt,Zurich,5G NR,Commercial,47.3780,8.5400,False
+Bell,Zurich,5G NR,Commercial,43.4215,-81.6257,False
