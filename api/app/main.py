@@ -12,6 +12,7 @@ from typing import Annotated
 
 import h3
 from fastapi import Depends, FastAPI, HTTPException, Query
+from fastapi.responses import RedirectResponse
 
 from .db import H3_COLUMN, filter_clause, pool
 from .text import like_escape, search_key
@@ -59,6 +60,11 @@ def centre(cell: str) -> tuple[float, float]:
 
 
 # ---------- endpoints ----------
+
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse("docs")
+
 
 @app.get("/health")
 def health():

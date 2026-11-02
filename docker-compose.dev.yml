@@ -1,6 +1,7 @@
 # Laptop development database only. Never used for the measured environments.
 #   docker compose -f docker-compose.dev.yml up -d
-# Creates fiveg (app) and fiveg_test (pytest), both with PostGIS, on localhost:5432.
+# Creates fiveg (app) and fiveg_test (pytest), both with PostGIS, on localhost:5433
+# (5433 so it doesn't clash with a PostgreSQL already installed on the laptop).
 services:
   db:
     image: postgis/postgis:16-3.4

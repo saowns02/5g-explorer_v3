@@ -8,7 +8,9 @@ Three-tier web app mapping reported 5G availability on a 3D globe, deployed nati
 | `api/` | FastAPI service: globe endpoints, place search and place detail, plus `/nearby` for the spatial KPI |
 | `db/` | `schema.sql` (PostGIS, GiST index), `load.py` loader, `etl/` cleaning, `tests/` data validation |
 | `deploy/native/` | `setup.sh` for the native baseline, Nginx and systemd templates |
-| `deploy/openstack/` | Provisioning script or Heat template (Phase 3) |
+| `deploy/openstack/` | Keystone tenants and users, custom image, provisioning (networks, security groups, Cinder, VMs), deploy, recovery and scaling tests. See its README |
+| `kpi/` | Load test (Locust), vmstat, query timing, port scan, results summary. See its README |
+| `Jenkinsfile` | CI/CD: checkout, lint and test, validate data, build, deploy to OpenStack, smoke test |
 | `data/` | Raw and cleaned CSV. Every environment loads the cleaned file |
 | `docs/troubleshooting.md` | Problem log, from day one |
 | `results/` | KPI result CSVs |
@@ -28,7 +30,7 @@ python3 -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts
 pip install -r api/requirements-dev.txt
 
 # 3. Load the data (about 5 seconds)
-export DATABASE_URL=postgresql://postgres:postgres@localhost:5432/fiveg
+export DATABASE_URL=postgresql://postgres:postgres@localhost:5433/fiveg
 python db/load.py data/5g_coverage_clean.csv
 
 # 4. API on port 8000 (docs at http://localhost:8000/docs)
@@ -47,7 +49,7 @@ The KPI tile in the top right should say **Live API**. Without `VITE_API_URL` th
 
 ```bash
 pytest db/tests                                           # data validation (CI "validate data" stage)
-cd api && TEST_DATABASE_URL=postgresql://postgres:postgres@localhost:5432/fiveg_test pytest
+cd api && TEST_DATABASE_URL=postgresql://postgres:postgres@localhost:5433/fiveg_test pytest
 cd frontend && npm test
 ```
 

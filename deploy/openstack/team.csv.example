@@ -1,0 +1,7 @@
+# username,role_in_5g-prod,role_in_5g-dev   (roles: admin, member, reader, none)
+# Copy to team.csv and use your real names. team.csv is not committed.
+host-owner,admin,admin
+db-lead,member,member
+api-lead,member,member
+ci-lead,member,admin
+kpi-lead,reader,member

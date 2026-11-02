@@ -100,7 +100,7 @@ if [[ "${CAP:-0}" == 1 ]]; then
 fi
 
 log "Smoke test"
-for i in $(seq 1 30); do
+for _ in $(seq 1 30); do
   if curl -fsS "http://127.0.0.1:$NGINX_PORT/api/health" >/dev/null; then break; fi
   sleep 1
 done

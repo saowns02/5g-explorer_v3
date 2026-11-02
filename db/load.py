@@ -28,11 +28,16 @@ COLUMNS = (
 )
 PLACE_COLUMNS = ("id", "name", "search_key", "lat", "lng", "records", "operators")
 
-@functools.lru_cache(maxsize=None)
+@functools.cache
 def search_key(name: str) -> str:
     """Lower case without accents. Must match searchKey() in frontend/src/api/mock.js."""
     decomposed = unicodedata.normalize("NFKD", name)
     return "".join(c for c in decomposed if not unicodedata.combining(c)).lower().strip()
+
+
+def pg_quote(text: str) -> str:
+    """One element of a PostgreSQL array literal, quoted and escaped."""
+    return '"' + text.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
 class Places:
@@ -57,7 +62,7 @@ class Places:
 
     def copy_rows(self):
         for pid, p in self.rows.items():
-            ops = "{" + ",".join('"' + o.replace('\\', '\\\\').replace('"', '\\"') + '"' for o in sorted(p["ops"])) + "}"
+            ops = "{" + ",".join(pg_quote(o) for o in sorted(p["ops"])) + "}"
             yield (pid, p["name"], search_key(p["name"]), p["lat"] / p["n"], p["lng"] / p["n"], p["n"], ops)
 
 
