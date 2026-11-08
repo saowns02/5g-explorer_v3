@@ -59,7 +59,7 @@ release_tarball() {
 }
 
 # Private (fixed) IP of a server's first port.
-private_ip() { openstack port list --server "$1" -f value -c "Fixed IP Addresses" | grep -oE "ip_address='[0-9.]+'" | head -1 | cut -d"'" -f2; }
+private_ip() { openstack port list --server "$1" -f value -c "Fixed IP Addresses" | grep -oE "[0-9]+(\.[0-9]+){3}" | head -1; }
 
 # Floating IP attached to a server, if any.
 floating_ip() {
