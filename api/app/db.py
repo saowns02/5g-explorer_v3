@@ -14,6 +14,8 @@ pool = ConnectionPool(
     max_size=POOL_MAX,
     kwargs={"row_factory": dict_row},
     open=False,
+    check=ConnectionPool.check_connection,
+    max_idle=60,
 )
 
 # Column names can't be bound as parameters, so resolution maps through
